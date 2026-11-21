@@ -1332,19 +1332,39 @@ nav a { transition: background .25s, color .25s, border-color .25s; }
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    /* Blurred sunset photo filling the whole screen */
-    background-size: cover;
+    overflow: hidden;
+    background-color: var(--background);
+  }
+  /* Layer 1: the logo blown up and heavily blurred into a soft red/blue colour wash */
+  .solvik-backdrop-glow {
+    position: absolute;
+    inset: -15%;
+    background-image: var(--backdrop-img);
+    background-size: 115% auto;
     background-position: center;
     background-repeat: no-repeat;
+    filter: blur(90px) saturate(150%);
+    opacity: 0.9;
   }
+  /* Layer 2: the logo itself, centred and softly blurred like the reference site's photo */
+  .solvik-backdrop-logo {
+    position: absolute;
+    inset: 0;
+    background-image: var(--backdrop-img);
+    background-size: min(70vw, 900px) auto;
+    background-position: center 55%;
+    background-repeat: no-repeat;
+    filter: blur(8px);
+    opacity: 0.85;
+  }
+  /* Layer 3: admit-academy-hub style dark-green mask, clearer at the bottom, darker toward the edges and top */
   .solvik-backdrop::after {
     content: "";
     position: absolute;
     inset: 0;
-    /* Neutral dark mask so the red/blue infinity glow stays vivid */
     background:
-      radial-gradient(ellipse at 50% 55%, transparent 35%, oklch(0.14 0.008 20 / 60%) 85%),
-      linear-gradient(180deg, oklch(0.16 0.008 20 / 40%), oklch(0.13 0.006 20 / 55%));
+      radial-gradient(ellipse at 50% 120%, transparent 30%, oklch(0.18 0.012 160 / 55%) 75%),
+      linear-gradient(180deg, oklch(0.2 0.012 160 / 35%), oklch(0.16 0.01 160 / 55%));
   }
 
   .glass {

@@ -1,12 +1,12 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useState, type ReactNode, type CSSProperties } from "react";
 import {
   LayoutDashboard, Megaphone, UserPlus, Wallet, GraduationCap, Users, Briefcase, Settings,
   TrendingUp, Sparkles, MoreHorizontal,
   BarChart3, Activity, CircleDot, ShieldCheck, Landmark,
 } from "lucide-react";
 import { Area, AreaChart, CartesianGrid, Cell, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import backdrop from "@/assets/infinity-red-blue.png.asset.json";
+import backdrop from "@/assets/manager-llp-infinity-logo.png.asset.json";
 import brandLogo from "@/assets/manager-edu-logo-m.png.asset.json";
 import { DockNav } from "@/components/DockNav";
 import { HeaderActions } from "@/components/HeaderActions";
@@ -67,7 +67,14 @@ export function AppShell({
 
   return (
     <div className={`solvik relative min-h-screen w-full font-sans ${theme === "light" ? "light" : ""}`}>
-      <div className="solvik-backdrop" style={{ backgroundImage: `url(${backdrop.url})` }} aria-hidden />
+      <div
+        className="solvik-backdrop"
+        style={{ "--backdrop-img": `url(${backdrop.url})` } as CSSProperties}
+        aria-hidden
+      >
+        <div className="solvik-backdrop-glow" />
+        <div className="solvik-backdrop-logo" />
+      </div>
 
       <QuickTools theme={theme} onThemeChange={setTheme} />
 
