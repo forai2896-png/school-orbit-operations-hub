@@ -1332,19 +1332,19 @@ nav a { transition: background .25s, color .25s, border-color .25s; }
     inset: 0;
     z-index: 0;
     pointer-events: none;
-    /* Infinity logo centered in the middle of the screen */
-    background-size: min(62vw, 760px) auto;
-    background-position: center center;
+    /* Blurred sunset photo filling the whole screen */
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
   }
   .solvik-backdrop::after {
     content: "";
     position: absolute;
     inset: 0;
-    /* 70% dark mask over the logo */
+    /* Soft dark-green mask: clear glow at the bottom, darker toward the edges and top */
     background:
-      radial-gradient(ellipse at 50% 50%, oklch(0.16 0.012 20 / 55%) 20%, oklch(0.15 0.012 20 / 78%) 70%),
-      linear-gradient(180deg, oklch(0.17 0.012 20 / 70%), oklch(0.15 0.01 20 / 74%));
+      radial-gradient(ellipse at 50% 120%, transparent 30%, oklch(0.18 0.012 160 / 55%) 75%),
+      linear-gradient(180deg, oklch(0.2 0.012 160 / 35%), oklch(0.16 0.01 160 / 55%));
   }
 
   .glass {
