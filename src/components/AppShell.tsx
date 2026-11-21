@@ -6,7 +6,7 @@ import {
   BarChart3, Activity, CircleDot, ShieldCheck, Landmark,
 } from "lucide-react";
 import { Area, AreaChart, CartesianGrid, Cell, Pie, PieChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import backdrop from "@/assets/backdrop-sunset.jpg.asset.json";
+import backdrop from "@/assets/infinity-red-blue.png.asset.json";
 import brandLogo from "@/assets/manager-edu-logo-m.png.asset.json";
 import { DockNav } from "@/components/DockNav";
 import { HeaderActions } from "@/components/HeaderActions";

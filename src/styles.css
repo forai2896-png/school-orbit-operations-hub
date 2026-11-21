@@ -1341,10 +1341,10 @@ nav a { transition: background .25s, color .25s, border-color .25s; }
     content: "";
     position: absolute;
     inset: 0;
-    /* Soft dark-green mask: clear glow at the bottom, darker toward the edges and top */
+    /* Neutral dark mask so the red/blue infinity glow stays vivid */
     background:
-      radial-gradient(ellipse at 50% 120%, transparent 30%, oklch(0.18 0.012 160 / 55%) 75%),
-      linear-gradient(180deg, oklch(0.2 0.012 160 / 35%), oklch(0.16 0.01 160 / 55%));
+      radial-gradient(ellipse at 50% 55%, transparent 35%, oklch(0.14 0.008 20 / 60%) 85%),
+      linear-gradient(180deg, oklch(0.16 0.008 20 / 40%), oklch(0.13 0.006 20 / 55%));
   }
 
   .glass {
