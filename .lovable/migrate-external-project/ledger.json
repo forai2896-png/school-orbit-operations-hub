@@ -1,0 +1,65 @@
+[
+  {
+    "capability": "code",
+    "source": "code archive school-suite-migration-studio-main.zip (TanStack Start app)",
+    "outcome": "all source, routes, modules, styles, tests and public files copied; extra packages installed; TanStack versions kept",
+    "status": "done",
+    "next_action": "none"
+  },
+  {
+    "capability": "images (logo, backdrop)",
+    "source": "asset pointers owned by the source project",
+    "outcome": "logo, favicon and backdrop re-uploaded into this project and showing",
+    "status": "done",
+    "next_action": "none"
+  },
+  {
+    "capability": "schema",
+    "source": "none - app_state shim over browser localStorage",
+    "outcome": "no server database in source; kept browser storage",
+    "status": "not_applicable",
+    "next_action": "none"
+  },
+  {
+    "capability": "records",
+    "source": "seed files in code + each visitor's browser storage",
+    "outcome": "seed data ships with the code",
+    "status": "not_applicable",
+    "next_action": "none"
+  },
+  {
+    "capability": "auth identities / authorization",
+    "source": "none - no sign-in in source",
+    "outcome": "none to migrate",
+    "status": "not_applicable",
+    "next_action": "none"
+  },
+  {
+    "capability": "uploaded file bytes",
+    "source": "public/sample-documents + browser storage",
+    "outcome": "sample documents copied to public/",
+    "status": "done",
+    "next_action": "none"
+  },
+  {
+    "capability": "external providers / public endpoints / webhooks / schedules / secrets",
+    "source": "none detected (only optional VITE_ATTENDANCE_LATE_COUNTS_AS_PRESENT, VITE_TOPIC_NOTES_MAX_FILE_SIZE_MB with code defaults)",
+    "outcome": "none",
+    "status": "not_applicable",
+    "next_action": "none"
+  },
+  {
+    "capability": "cutover",
+    "source": "-",
+    "outcome": "publish from this project when ready",
+    "status": "pending",
+    "next_action": "user publishes"
+  },
+  {
+    "capability": "verification",
+    "source": "-",
+    "outcome": "build OK; 10 main sections load with no console errors or failed requests; HR approval persists after reload; 257/280 tests pass, the same 23 failures the source recorded",
+    "status": "verified",
+    "next_action": "optional: fix inherited failing tests"
+  }
+]
